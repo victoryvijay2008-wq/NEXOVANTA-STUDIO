@@ -1,0 +1,37 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="200" height="200" rx="44" fill="#090e1c" stroke="rgba(6, 182, 212, 0.3)" stroke-width="2" />
+  
+  <!-- Subtle Grid Accent -->
+  <circle cx="100" cy="100" r="70" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Geometric N-Monogram Prism -->
+  <g filter="url(#glow)">
+    <!-- Left Pillar -->
+    <path d="M48 152V48L74 65V152L48 152Z" fill="url(#cyanGrad)" />
+    
+    <!-- Diagonal Bridge -->
+    <path d="M74 65L126 135V152L74 82V65Z" fill="url(#cyanGrad)" opacity="0.9" />
+    
+    <!-- Right Pillar -->
+    <path d="M126 48L152 65V152L126 135V48Z" fill="url(#violetGrad)" />
+
+    <!-- Center Pulse Light -->
+    <circle cx="100" cy="100" r="7" fill="#ffffff" />
+  </g>
+</svg>

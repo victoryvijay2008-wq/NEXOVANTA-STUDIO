@@ -289,10 +289,16 @@ export const Portfolio: React.FC = () => {
                           <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
                           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
                         </div>
-                        <div className="text-[11px] font-mono text-[#E5C378] px-3 py-0.5 rounded-md bg-black/60 border border-white/5 flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-                          <span>zevora-restaurant.web</span>
-                        </div>
+                        <a
+                          href={featuredProject.liveDemoUrl || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] font-mono text-[#E5C378] hover:text-white px-3 py-0.5 rounded-md bg-black/60 border border-[#D4AF37]/30 flex items-center gap-1.5 transition-colors"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                          <span>zevoraresturant.netlify.app</span>
+                          <ExternalLink className="w-2.5 h-2.5 opacity-70" />
+                        </a>
                         <div className="w-8" />
                       </div>
 
@@ -562,11 +568,35 @@ export const Portfolio: React.FC = () => {
               {selectedProject.isFeatured ? (
                 <div className="p-3.5 rounded-xl bg-gradient-to-r from-[#1b1016] to-[#12131c] border border-[#D4AF37]/30 text-xs text-slate-300 flex items-center justify-between flex-wrap gap-2">
                   <div className="flex items-center gap-2">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-                    </span>
-                    <span>Live Demo Status: <strong>Deployment in Progress</strong></span>
+                    {selectedProject.liveDemoUrl ? (
+                      <div className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span>
+                          Live Production:{" "}
+                          <a
+                            href={selectedProject.liveDemoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-emerald-400 font-semibold underline underline-offset-2 hover:text-emerald-300"
+                          >
+                            zevoraresturant.netlify.app
+                          </a>
+                        </span>
+                      </div>
+                    ) : (
+                      <>
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                        </span>
+                        <span>
+                          Live Demo Status: <strong>Deployment in Progress</strong>
+                        </span>
+                      </>
+                    )}
                   </div>
                   {selectedProject.sourceCodeUrl && (
                     <a
@@ -590,20 +620,31 @@ export const Portfolio: React.FC = () => {
 
             {/* Modal Footer */}
             <div className="p-4 border-t border-white/10 bg-white/[0.02] flex items-center justify-between flex-wrap gap-3">
-              {selectedProject.sourceCodeUrl ? (
-                <a
-                  href={selectedProject.sourceCodeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#D4AF37] to-[#721C24] hover:opacity-90 shadow-md"
-                >
-                  <GithubIcon className="w-4 h-4" />
-                  <span>View Source Code</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              ) : (
-                <div />
-              )}
+              <div className="flex items-center gap-2 flex-wrap">
+                {selectedProject.sourceCodeUrl && (
+                  <a
+                    href={selectedProject.sourceCodeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#D4AF37] to-[#721C24] hover:opacity-90 shadow-md"
+                  >
+                    <GithubIcon className="w-4 h-4" />
+                    <span>View Source Code</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+                {selectedProject.liveDemoUrl && (
+                  <a
+                    href={selectedProject.liveDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-md"
+                  >
+                    <span>Live Demo</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+              </div>
 
               <div className="flex items-center gap-2">
                 <button

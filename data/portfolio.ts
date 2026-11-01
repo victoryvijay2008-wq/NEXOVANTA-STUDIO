@@ -60,8 +60,8 @@ export const zevoraProject: PortfolioProject = {
   ],
   image: "/images/zevora-showcase.jpg",
   sourceCodeUrl: "https://github.com/victoryvijay2008-wq/ZEVORA-RESTAURANT",
-  liveDemoUrl: null, // Deployed URL is not available yet
-  deploymentStatus: "Deployment in Progress",
+  liveDemoUrl: "https://zevoraresturant.netlify.app/",
+  deploymentStatus: "Live on Netlify",
   mockUi: {
     themeColor: "from-[#1c1216] via-[#2a131b] to-[#0d0d12]",
     headerTitle: "ZEVORA Restaurant",

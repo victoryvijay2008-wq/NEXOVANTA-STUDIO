@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NEXOVANTA STUDIO — Official Website
 
 > **Build. Innovate. Grow.**  
@@ -150,7 +149,4 @@ To test production mode locally:
 ```powershell
 npm run start
 ```
-=======
-# NEXOVANTA-STUDIO
-Official website and portfolio of NEXOVANTA STUDIO, a digital studio building modern business websites and AI-powered web applications.
->>>>>>> 6e38a4bb5ce1b620f18c3b0a56ad4775c06eb311
+

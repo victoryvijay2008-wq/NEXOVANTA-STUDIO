@@ -20,9 +20,58 @@ export interface PortfolioProject {
     sections: string[];
     sampleStats: string;
   };
+  isFeatured?: boolean;
+  featuredBadge?: string;
+  image?: string;
+  sourceCodeUrl?: string;
+  liveDemoUrl?: string | null;
+  deploymentStatus?: string;
 }
 
+export const zevoraProject: PortfolioProject = {
+  id: "zevora-restaurant",
+  title: "ZEVORA Restaurant",
+  category: "restaurant",
+  categoryLabel: "Full-Stack Restaurant Website",
+  demoLabel: "FEATURED PROJECT • HOSPITALITY",
+  isFeatured: true,
+  featuredBadge: "Featured Project",
+  tagline: "A World of Flavours.",
+  summary:
+    "A modern multi-cuisine restaurant website designed to provide customers with a smooth dining experience through digital menus, table reservations, online ordering, and restaurant management.",
+  fullOverview:
+    "ZEVORA Restaurant is a complete full-stack web application designed for a premier multi-cuisine dining establishment. Built with a fast, modern frontend, Node.js logic, and Supabase database architecture, ZEVORA delivers a seamless digital experience from exploratory menu browsing to one-touch table reservations, full shopping cart and online ordering, live order status tracking, and a secure administrative dashboard for dishes and orders.",
+  liveDemoHighlight:
+    "Includes dynamic multi-cuisine digital menu with live dish CRUD operations, reservation engine with party sizes, cart & order flow with live tracking, and Supabase database integration.",
+  features: [
+    "Digital menu management.",
+    "Add, edit and delete dishes.",
+    "Table reservation system.",
+    "Online ordering and shopping cart.",
+    "Order management and status tracking.",
+    "Secure admin dashboard.",
+    "Responsive user interface.",
+  ],
+  techStack: ["HTML", "CSS", "JavaScript", "Node.js", "Supabase"],
+  metrics: [
+    { label: "Architecture", value: "Full-Stack" },
+    { label: "Database", value: "Supabase PG" },
+    { label: "Interface", value: "100% Responsive" },
+  ],
+  image: "/images/zevora-showcase.jpg",
+  sourceCodeUrl: "https://github.com/victoryvijay2008-wq/ZEVORA-RESTAURANT",
+  liveDemoUrl: null, // Deployed URL is not available yet
+  deploymentStatus: "Deployment in Progress",
+  mockUi: {
+    themeColor: "from-[#1c1216] via-[#2a131b] to-[#0d0d12]",
+    headerTitle: "ZEVORA Restaurant",
+    sections: ["Digital Menu Management", "Table Reservations", "Online Ordering & Cart", "Admin Dashboard"],
+    sampleStats: "Multi-Cuisine • Supabase Real-Time Backend",
+  },
+};
+
 export const portfolioProjects: PortfolioProject[] = [
+  zevoraProject,
   {
     id: "saffron-table-restaurant",
     title: "Saffron & Thyme Artisan Bistro",

@@ -1,7 +1,7 @@
 export interface PortfolioProject {
   id: string;
   title: string;
-  category: "restaurant" | "small-business" | "ai-app";
+  category: "restaurant" | "small-business" | "ai-app" | "healthcare-ai";
   categoryLabel: string;
   demoLabel: string; // "DEMO PROJECT CONCEPT"
   tagline: string;
@@ -70,8 +70,63 @@ export const zevoraProject: PortfolioProject = {
   },
 };
 
+export const aiHealthVerseProject: PortfolioProject = {
+  id: "ai-healthverse",
+  title: "AI HealthVerse",
+  category: "healthcare-ai",
+  categoryLabel: "Healthcare AI / AI Web Application",
+  demoLabel: "FEATURED PROJECT • HEALTHCARE AI",
+  isFeatured: true,
+  featuredBadge: "Featured Project",
+  tagline: "The Digital Twin of an Entire Healthcare Network.",
+  summary:
+    "An AI-driven healthcare intelligence and supply-chain command center designed as a digital twin for regional hospital networks, outbreak prediction, medicine forecasting, and resource redistribution.",
+  fullOverview:
+    "AI HealthVerse is an intelligent healthcare command center engineered to provide comprehensive operational visibility across distributed hospital networks. Built with a modern Next.js 15 App Router architecture, TypeScript, and reactive telemetry dashboards, the platform models real-time clinical capacity, forecasts regional disease outbreaks using predictive AI models, projects pharmaceutical demand curves, and calculates automated inter-facility resource redistribution plans with transparent explainability.",
+  liveDemoHighlight:
+    "Features a National Command Center with real-time hospital load and ICU tracking, predictive AI disease outbreak model, medicine supply forecasting charts, and explainable decision panels.",
+  features: [
+    "National Command Center monitoring hospital load, ICU capacity & ambulance fleets.",
+    "AI Disease Outbreak Predictor with regional risk trajectory modeling.",
+    "Medicine Demand Forecast charts visualizing pharmaceutical supply trends.",
+    "Intelligent Resource Redistribution engine for inter-facility transfers.",
+    "Interactive Digital Twin Map modeling healthcare network topologies.",
+    "Transparent Explainability Panel detailing AI operational recommendations.",
+    "Natural-language AI Assistant for clinical and operational queries.",
+  ],
+  techStack: [
+    "Next.js 15",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Recharts",
+    "Lucide Icons",
+  ],
+  metrics: [
+    { label: "Architecture", value: "Digital Twin" },
+    { label: "Forecasting Latency", value: "< 250ms" },
+    { label: "Interface", value: "Real-Time / Reactive" },
+  ],
+  image: "/images/aihealthverse-showcase.png",
+  sourceCodeUrl: "https://github.com/victoryvijay2008-wq/AI-HealthVerse",
+  liveDemoUrl: "https://aihealthverse.netlify.app/",
+  deploymentStatus: "Live on Netlify",
+  mockUi: {
+    themeColor: "from-cyan-950 via-[#0a1f2e] to-[#040d1a]",
+    headerTitle: "AI HealthVerse Command Center",
+    sections: [
+      "National Command Center",
+      "AI Outbreak Predictor",
+      "Medicine Demand Forecast",
+      "Resource Redistribution",
+    ],
+    sampleStats: "Digital Twin Network • Real-Time AI Diagnostics",
+  },
+};
+
 export const portfolioProjects: PortfolioProject[] = [
   zevoraProject,
+  aiHealthVerseProject,
   {
     id: "saffron-table-restaurant",
     title: "Saffron & Thyme Artisan Bistro",

@@ -1,7 +1,7 @@
 export interface PortfolioProject {
   id: string;
   title: string;
-  category: "restaurant" | "small-business" | "ai-app" | "healthcare-ai";
+  category: "restaurant" | "small-business" | "ai-app" | "healthcare-ai" | "fitness";
   categoryLabel: string;
   demoLabel: string; // "DEMO PROJECT CONCEPT"
   tagline: string;
@@ -124,9 +124,68 @@ export const aiHealthVerseProject: PortfolioProject = {
   },
 };
 
+export const pulsefitProject: PortfolioProject = {
+  id: "pulsefit-fitness",
+  title: "PULSEFIT FITNESS",
+  category: "fitness",
+  categoryLabel: "Fitness & Gym Website",
+  demoLabel: "FEATURED PROJECT • FITNESS & ATHLETICS",
+  isFeatured: true,
+  featuredBadge: "Featured Project",
+  tagline: "Train Smart. Live Strong.",
+  summary:
+    "A modern fitness website designed to help gym members explore membership plans, discover trainers, view workout schedules, calculate BMI, and access exercise tutorial videos.",
+  fullOverview:
+    "PULSEFIT FITNESS is a comprehensive full-stack fitness club platform engineered for athletic training centers and modern gyms. Built with Next.js 16 App Router, React 19, TypeScript, and Supabase database architecture, the website features tiered membership pricing plans, certified coach discovery, weekly interactive class schedule booking, an on-demand workout video library, a real-time BMI health calculator, dedicated member dashboard, free trial booking funnels, direct WhatsApp concierge, and upcoming Razorpay online payment integration.",
+  liveDemoHighlight:
+    "Includes dynamic class scheduling calendar, interactive BMI calculator, trainer directory, workout video library player, member dashboard, and online payment checkout (coming soon).",
+  features: [
+    "Premium gym website design with athletic dark aesthetic.",
+    "Membership pricing plans with tiered feature breakdowns.",
+    "Workout video library with categorized exercise tutorials.",
+    "Certified trainer profiles with specialized disciplines.",
+    "Weekly class schedules with live slot booking.",
+    "Real-time BMI calculator with instant category indicators.",
+    "Member dashboard for workout and booking management.",
+    "Free trial booking funnel with automated qualification.",
+    "Direct WhatsApp concierge for instant inquiries.",
+    "Online payment integration with Razorpay (Coming Soon).",
+  ],
+  techStack: [
+    "Next.js 16",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS",
+    "Supabase",
+    "Lucide Icons",
+  ],
+  metrics: [
+    { label: "Architecture", value: "Full-Stack App" },
+    { label: "Database", value: "Supabase PG" },
+    { label: "Interface", value: "100% Responsive" },
+  ],
+  image: "/images/pulsefit-showcase.png",
+  sourceCodeUrl: "https://github.com/victoryvijay2008-wq/PULSEFIT-FITNESS",
+  liveDemoUrl: "https://pulsefitfitness.netlify.app/",
+  deploymentStatus: "Live on Netlify",
+  mockUi: {
+    themeColor: "from-[#1b0d11] via-[#240e15] to-[#0c0d12]",
+    headerTitle: "PULSEFIT FITNESS Platform",
+    sections: [
+      "Membership Pricing",
+      "Trainer Profiles",
+      "Class Schedules",
+      "BMI Calculator",
+      "Workout Library",
+    ],
+    sampleStats: "3,200+ Athletes • 28 Elite Coaches • 75+ Classes",
+  },
+};
+
 export const portfolioProjects: PortfolioProject[] = [
   zevoraProject,
   aiHealthVerseProject,
+  pulsefitProject,
   {
     id: "saffron-table-restaurant",
     title: "Saffron & Thyme Artisan Bistro",

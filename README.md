@@ -79,7 +79,7 @@ export const contactConfig = {
 - **Services Offered:**
   Edit **[`data/services.ts`](data/services.ts)** to add, remove, or modify service descriptions and deliverables.
 - **Portfolio Demos:**
-  Edit **[`data/portfolio.ts`](data/portfolio.ts)** to customize the 5 showcase projects (ZEVORA Restaurant, AI HealthVerse, and 3 functional prototypes).
+  Edit **[`data/portfolio.ts`](data/portfolio.ts)** to customize the 6 showcase projects (ZEVORA Restaurant, AI HealthVerse, PULSEFIT FITNESS, and 3 functional prototypes).
 - **FAQs:**
   Edit **[`data/faqs.ts`](data/faqs.ts)** to customize the interactive questions and answers.
 - **AI Chatbot Knowledge:**
@@ -107,7 +107,7 @@ nexovanta-studio/
 │   ├── Hero.tsx            # High-impact headline, CTAs & credibility metrics
 │   ├── Logo.tsx            # Dedicated brand logo component with easy image swap
 │   ├── Navbar.tsx          # Sticky blur header with mobile drawer
-│   ├── Portfolio.tsx       # 5 showcase projects with category tabs & modal inspection
+│   ├── Portfolio.tsx       # 6 showcase projects with category tabs & modal inspection
 │   └── Services.tsx        # 5 core service cards with direct inquiry triggers
 ├── data/
 │   ├── adminMockData.ts    # Demo inquiries and metrics for /admin-demo
